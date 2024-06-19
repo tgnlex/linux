@@ -1,8 +1,5 @@
-#!/usr/bin/bash
+. ~/.bash_aliases 
 
-if [-f ~/.bash_alias]; then 
-  ~/.bash_aliases 
-fi
 
 sl 
 figlet -cl "Welcome TGN"
