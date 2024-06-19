@@ -3,3 +3,4 @@ alias back='cd ..'
 alias projects='cd /code/projects'
 
 alias unlock='chmod -R 777'
+alias py='pyhon3'
