@@ -6,4 +6,5 @@
 
 (setq inhibit-startup-message t) ;; Dont show splash screen
 (setq visible-bell t) ;; Flash when the bell rings
+(setq blink-cursor-mode t)
 
