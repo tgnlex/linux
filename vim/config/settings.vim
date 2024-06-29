@@ -17,12 +17,14 @@ set incsearch
 set ignorecase
 set wildmenu
 set wildmode=list:longest
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.mp4,*.exe,*.img
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.mp4,*.exe,*.img,*.pdf,*.pyc,*.exe,*.flv,*.xlsx
+
 
 set smartcase 
 set smarttab
 set smartindent
-set tabstop=4 softtabstop=4
+set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 
@@ -33,4 +35,8 @@ set guicursor=
 set cursorline 
 set cursorcolumn
 
+set nobackup 
+set showcmd 
+set showmode 
+set showmatch
 
