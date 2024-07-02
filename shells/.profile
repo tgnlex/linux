@@ -6,6 +6,11 @@ if [ "$BASH" ]; then
   fi
 fi
 
+if [ -f $HOME/.kshrc -a -r $HOME/.kshrc ]; then 
+				ENV=$HOME/.kshrc 
+				export ENV 
+fi 
+
 mesg n 2> /dev/null || true
 
 # opam configuration
