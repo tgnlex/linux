@@ -12,6 +12,3 @@ if [ -f $HOME/.kshrc -a -r $HOME/.kshrc ]; then
 fi 
 
 mesg n 2> /dev/null || true
-
-# opam configuration
-test -r /root/.opam/opam-init/init.sh && . /root/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
