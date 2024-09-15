@@ -1,0 +1,13 @@
+. ~/.bash_aliases
+export PS1='\u$'
+figlet -cl "Welcome TGN"
+neofetch
+# Global file 
+if [ -f /etc/bashrc]; then 
+  . /etc/bashrc 
+fi 
+export HISTSIZE = 10000
+export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:/opt/nvim/"
+export PATH=/home${USER}/salt:$PATH 
+export SALT_SALTFILE=/home/${USER}/salt/Saltfile
