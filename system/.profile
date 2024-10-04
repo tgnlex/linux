@@ -11,4 +11,3 @@ if [ -f $HOME/.kshrc -a -r $HOME/.kshrc ]; then
 				export ENV 
 fi 
 
-mesg n 2> /dev/null || true
