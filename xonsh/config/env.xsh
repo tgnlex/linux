@@ -5,3 +5,4 @@ if ON_LINUX or ON_DARWIN:
             $PATH.append(str(p))  # or `$PATH.prepend()`
 
 
+$date = type('TimeCl', (object,), {'__repr__':lambda self: X.imp.datetime.datetime.now().isoformat() })()
