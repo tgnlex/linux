@@ -1,1 +1,2 @@
-
+Host git@github.com
+  ForwardAgent yes
