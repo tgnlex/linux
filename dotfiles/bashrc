@@ -1,13 +1,22 @@
-. ~/.config/bash/startup.sh
-. ~/.config/bash/options.sh
-. ~/.config/bash/aliases.sh 
-. ~/.config/bash/env.sh
-. ~/.config/bash/completion.sh 
-. ~/.config/bash/nvm.sh 
-. ~/.config/bash/.inputrc
+. ~/sh/startup.sh
+. ~/sh/aliases.sh 
+. ~/sh/env.sh
+. ~/sh/nvm.sh 
+. ~/.inputrc
 
 eval "$(basher init - bash)"    
 
+
+# bash completions
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# Conda setup
 __conda_setup="$('/root/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"

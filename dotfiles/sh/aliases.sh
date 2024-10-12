@@ -1,4 +1,3 @@
-
 alias q='exit'
 alias clr='clear'
 alias h='history'
@@ -7,7 +6,6 @@ alias p='cat'
 alias rma='rm -rf'
 alias ls='ls -a'
 alias la='ls -a'
-alias lls='ls'
 alias repos='cd /repos/'
 alias t='time'
 alias k='kill'
@@ -25,3 +23,5 @@ alias vimrc='nvim ~/.vimrc'
 alias bashrc='nvim ~/.bashrc'
 alias gentags='ctags -R .'
 alias ssh-gh-test='ssh -T git@github.com'
+
+alias gupdate='git add * && git commit * && git push'
