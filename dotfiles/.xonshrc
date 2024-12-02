@@ -1,0 +1,6 @@
+from shell.config.env import *
+from shell.config.vars import * 
+from shell.config.opts import *
+from shell.config.plugins import *
+from shell.config.alias import * 
+

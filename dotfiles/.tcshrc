@@ -1,0 +1,12 @@
+set path = ( /bin /usr/local/bin /usr/bin ) 
+
+if ($?prompt) then 
+
+  set prompt = "%m:%~> "
+  set rmstar
+  set noclobber
+
+  if (`filetest -e /etc/complete.csh`) then 
+    source /etc/complete.tcsh
+  endif 
+endif
