@@ -1,5 +1,0 @@
-Host git@github.com 
-  ForwardAgent yes
-Host git@github.com/tgnlex/*
-  ForwardAgent yes
-
