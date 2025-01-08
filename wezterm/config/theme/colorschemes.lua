@@ -1,6 +1,6 @@
 
 local module = {}
 
-module.abernathy = 'Abernathy'
+module.primary = 'Abernathy'
 
 return module
