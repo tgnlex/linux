@@ -9,6 +9,9 @@ $PATH.append('/root/.local/bin')
 # ALIASES #
 aliases['la'] = 'ls -a'
 aliases['rf'] = 'rm -rf'
+aliases['pip'] = 'xpip'
 aliases['venv'] = 'bash /.venv/bin/activate'
 aliases['unlock'] = 'chmod 777 -R'
 aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
+aliases['git-update'] = 'git-save && git push'
+
