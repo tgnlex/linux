@@ -11,6 +11,7 @@ $PATH.append('/usr/bin')
 $PATH.append('/root/.local/bin')
 
 # ENV VARIABLES #
+$JAVA = '/usr/bin/java'
 $PAGER = "less"
 $EDITOR = "nvim"
 

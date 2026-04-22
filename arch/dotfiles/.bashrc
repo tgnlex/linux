@@ -3,6 +3,10 @@
 
 #PATH# 
 export PATH='/usr/bin:/usr/bin/local:/bin'
+export JAVA='/usr/bin/java'
+export GITHUB='git@github.com:tgnlex'
+export DOTFILES_DIR='/dotfiles'
+export CONFIGS_DIR='/configs'
 export QT_SELECT=4
 
 source ~/.bash_aliases
