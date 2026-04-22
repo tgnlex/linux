@@ -1,5 +1,7 @@
 # LIBRARIES #
 xontrib load coreutils
+# SOURCE SCRIPTS #
+source "~/scripts.xsh"
 # STARTUP MESSAGE #
 print("Welcome to xonsh shell!")
 
@@ -9,14 +11,21 @@ $PATH.append('/usr/bin')
 $PATH.append('/root/.local/bin')
 
 # ENV #
-
+$PAGER = "less"
 $EDITOR = "nvim"
+
 $GITHUB = "git@github.com:tgnlex"
+
+$DOTFILES_DIR = "/dotfiles"
+$CONFIGS_DIR = "/configs"
+$REPOS_DIR = "/repos"
+
 $XONSHRC_SRC = "/dotfiles/.xonshrc"
 $BASHRC_SRC = "/dotfiles/.bashrc"
 $TCSHRC_SRC = "/dotfiles/.tcshrc"
 $ZSHRC_SRC = "/dotfiles/.zshrc"
-$SCRIPTS = "/repos/scripts"
+
+$XONSH_SCRIPT_SRC = "/configs/scripts.xsh"
 
 # ALIASES #
 aliases['la'] = 'ls -a'
@@ -27,13 +36,14 @@ aliases['unlock'] = 'chmod 777 -R'
 aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
 aliases['git-update'] = 'git-save && git push'
 
-aliases['edit-xonsh'] = "$EDITOR $XONSHRC_SRC"
-aliases['edit-bash'] = "$EDITOR $BASHRC_SRC"
-aliases['edit-tcsh'] = "$EDITOR $TCSHRC_SRC"
-aliases['edit-zsh'] = "$EDITOR $ZSHRC_SRC"
+aliases['edit-script'] = '$EDITOR $XONSH_SCRIPT_SRC'
+aliases['edit-config'] = "$EDITOR $XONSHRC_SRC"
+aliases['edit-bashrc'] = "$EDITOR $BASHRC_SRC"
+aliases['edit-tcshrc'] = "$EDITOR $TCSHRC_SRC"
+aliases['edit-zshrc'] = "$EDITOR $ZSHRC_SRC"
 
-aliases['update-xonsh'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/ && source ~/.xonshrc"
-aliases['update-bash'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-aliases['update-tcsh'] = "cp -r $TCSHRC_SRC /root/ && cp -r $TCSHRC_SRC /home/alex/"
-aliases['update-zsh'] = "cp -r $ZSHRC_SRC /root/ && cp -r $ZSHRC_SRC /home/alex/"
-
+aliases['update-script'] = "cp -r $XONSH_SCRIPT_SRC /root/ && cp -r $XONSH_SCRIPT_SRC /home/alex/"
+aliases['update-config'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/ && source ~/.xonshrc"
+aliases['update-bashrc'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-tcshrc'] = "cp -r $TCSHRC_SRC /root/ && cp -r $TCSHRC_SRC /home/alex/"
+aliases['update-zshrc'] = "cp -r $ZSHRC_SRC /root/ && cp -r $ZSHRC_SRC /home/alex/"
