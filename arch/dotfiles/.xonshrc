@@ -9,11 +9,11 @@ $PATH.append('/root/.local/bin')
 
 $EDITOR = "nvim"
 $GITHUB = "git@github.com:tgnlex"
-$REPOS_DIR = "/repos"
-$DOTFILES_DIR = "/dotfiles"
-$NVIM_CONFIG = "~/.config/nvim/"
 $XONSHRC_SRC = "/dotfiles/.xonshrc"
 $BASHRC_SRC = "/dotfiles/.bashrc"
+$TCSHRC_SRC = "/dotfiles/.tcshrc"
+$ZSHRC_SRC = "/dotfiles/.zshrc"
+$SCRIPTS = "/repos/scripts"
 
 # ALIASES #
 aliases['la'] = 'ls -a'
@@ -26,3 +26,5 @@ aliases['git-update'] = 'git-save && git push'
 
 aliases['xonsh-update'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/"
 aliases['bash-update'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['tcsh-update'] = "cp -r $TCSHRC_SRC /root/ && cp -r $TCSHRC_SRC /home/alex/"
+aliases['zsh-update'] = "cp -r $ZSHRC_SRC /root/ && cp -r $ZSHRC_SRC /home/alex/"
