@@ -5,14 +5,7 @@
 export PATH='/usr/bin:/usr/bin/local:/bin'
 export QT_SELECT=4
 
-if [~/.bash_aliases]; then
-  source ~/.bash_aliases
-fi
-
-alias la = 'ls -a'
-alias rf = 'rm -rf'
-alias pip = 'xpip'
-alias venv = 'bash /.venv/bin/activate'
+source ~/.bash_aliases
 
 
 
