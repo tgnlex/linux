@@ -1,19 +1,27 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+#PATH# 
+export PATH='/usr/bin:/usr/bin/local:/bin'
+export QT_SELECT=4
 
-source ~/.bash_aliases
+if [~/.bash_aliases]; then
+  source ~/.bash_aliases
+fi
+
+alias la = 'ls -a'
+alias rf = 'rm -rf'
+alias pip = 'xpip'
+alias venv = 'bash /.venv/bin/activate'
+
+
+
 
 # SHELL OPTIONS #
 
 shopt -s checkwinsize
 shopt -s expand_aliases
 shopt -s histappend
-
-# ENV VARIABLES #
-
-export QT_SELECT=4
-
 
 # COLOR FUNCTION #
 colors() {
