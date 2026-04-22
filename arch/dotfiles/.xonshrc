@@ -3,6 +3,8 @@ xontrib load coreutils
 
 
 # PATH #
+$PATH.append('/bin')
+$PATH.append('/usr/bin')
 $PATH.append('/root/.local/bin')
 
 # ENV #
