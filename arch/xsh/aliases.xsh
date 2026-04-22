@@ -14,8 +14,8 @@ aliases['edit-config'] = "$EDITOR $XONSHRC_SRC"
 aliases['edit-bashrc'] = "$EDITOR $BASHRC_SRC"
 
 aliases['update-self'] = 'source ~/.xonshrc'
-aliases['update-aliases'] = "cp -r $XONSH_ALIASES_SRC /root/ && cp -r $XONSH_SCRIPT_SRC /home/alex/"
-aliases['update-scripts'] = "cp -r $XONSH_SCRIPT_SRC /root/ && cp -r $XONSH_SCRIPT_SRC /home/alex/"
+aliases['update-aliases'] = "cp -r $XONSH_ALIASES_SRC /root/ && cp -r $XONSH_ALIASES_SRC /home/alex/"
+aliases['update-scripts'] = "cp -r $XONSH_SCRIPTS_SRC /root/ && cp -r $XONSH_SCRIPTS_SRC /home/alex/"
 aliases['update-config'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/ && update-self"
 aliases['update-xonsh'] = "update-aliases && update-scripts && update-config"
 aliases['update-bashrc'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/ && bash source ~/.bashrc"
