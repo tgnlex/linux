@@ -1,6 +1,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+if [[ -e ~/.bash_aliases ]]; then
+  source ~/.bash_aliases
+fi
+
 #PATH# 
 export PATH='/usr/bin:/usr/bin/local:/bin'
 export JAVA='/usr/bin/java'
@@ -8,11 +12,6 @@ export GITHUB='git@github.com:tgnlex'
 export DOTFILES_DIR='/dotfiles'
 export CONFIGS_DIR='/configs'
 export QT_SELECT=4
-
-source ~/.bash_aliases
-
-
-
 
 # SHELL OPTIONS #
 

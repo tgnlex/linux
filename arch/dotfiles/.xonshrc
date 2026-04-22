@@ -1,8 +1,8 @@
 # LIBRARIES #
 xontrib load coreutils
-# SOURCE SCRIPTS #
-
-# STARTUP MESSAGE #
+# SCRIPTS FILE #
+source ~/scripts.xsh
+# STARTUP #
 print("Welcome to xonsh shell!")
 
 # PATH #
@@ -15,7 +15,6 @@ $JAVA = '/usr/bin/java'
 $PAGER = "less"
 $EDITOR = "nvim"
 
-
 $GITHUB = "git@github.com:tgnlex" 
 
 $REPOS_DIR = "/repos"        # Actual repos directory
@@ -26,11 +25,45 @@ $XONSHRC_SRC = "/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
 $BASHRC_SRC = "/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
 $TCSHRC_SRC = "/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
 $ZSHRC_SRC = "/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
-$KSHRC_SRC = "/fotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
+$KSHRC_SRC = "/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
+$VIMRC_SRC = "/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
+$BASH_ALIASES_SRC = "/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
+$XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh" #
 
-$XONSH_ALIASES_SRC = "/configs/xsh/aliases.xsh"
-$XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh"
+# ALIASES #
+aliases['la'] = 'ls -a'
+aliases['rf'] = 'rm -rf'
+aliases['pip'] = 'xpip'
 
-# SOURCE FILES #
-source "~/scripts.xsh" # Functions to call from command line # 
-source "~/aliases.xsh" # Similar to .bash_aliases #
+aliases['venv'] = 'bash /.venv/bin/activate'
+aliases['unlock'] = 'chmod 777 -R'
+
+aliases['install'] = 'pacman -Sy'
+
+aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
+aliases['git-update'] = 'git-save && git push'
+
+
+aliases['edit-xonshrc'] = "$EDITOR $XONSHRC_SRC"
+
+aliases['edit-bashrc'] = "$EDITOR $BASHRC_SRC"
+aliases['edit-tcshrc'] = "$EDITOR $TCSHRC_SRC"
+aliases['edit-zshrc'] = "$EDITOR $ZSHRC_SRC"
+aliases['edit-kshrc'] = "$EDITOR $KSHRC_SRC"
+aliases['edit-vimrc'] = "$EDITOR $VIMRC_SRC"
+
+aliases['edit-xonsh-scripts'] = "$EDITOR $XONSH_SCRIPT_SRC"
+aliases['edit-bash-aliases'] = "$EDITOR $BASH_ALIASES_SRC"
+
+aliases['refresh-self'] = "source ~/.xonshrc"
+
+aliases['update-xonsh-scripts'] = "cp -r $XONSH_SCRIPTS_SRC /root/ && cp -r $XONSH_SCRIPTS_SRC /home/alex/"
+aliases['update-bash-aliases'] = "cp -r $BASH_ALIASES_SRC /root && cp -r $BASH_ALIASES_SRC /home/alex/"
+aliases['update-xonsh'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/ && refresh-self"
+aliases['update-bash'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-tcsh'] = "cp -r $TCSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-zsh'] = "cp -r $ZSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-ksh'] = "cp -r $KSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-all'] = "update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh-scripts && update-xonsh"
+
+
