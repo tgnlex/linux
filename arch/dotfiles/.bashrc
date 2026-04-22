@@ -2,10 +2,7 @@
 [[ $- != *i* ]] && return
 
 
-# SOURCE ALIASES #
-if ~/.bash_aliases 
-  source ~/.bash_aliases
-fi
+source ~/.bash_aliases
 
 # SHELL OPTIONS #
 

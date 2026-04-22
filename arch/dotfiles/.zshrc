@@ -3,9 +3,8 @@
 USE_POWERLINE="true"
 HAS_WIDECHARS="false"
 
-if ~/.bash_aliases
-  source ~/.bash_aliases
-fi
+source ~/.bash_aliases
+
 
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
