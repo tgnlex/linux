@@ -12,8 +12,10 @@ $GITHUB = "git@github.com:tgnlex"
 $REPOS_DIR = "/repos"
 $DOTFILES_DIR = "/dotfiles"
 $NVIM_CONFIG = "~/.config/nvim/"
+$NVIM_SRC = "/repos/"
 $XONSHRC_SRC = "/dotfiles/.xonshrc"
 $BASHRC_SRC = "/dotfiles/.bashrc"
+
 # ALIASES #
 aliases['la'] = 'ls -a'
 aliases['rf'] = 'rm -rf'
