@@ -21,8 +21,6 @@ $REPOS_DIR = "/repos"        # Actual repos directory
 $CONFIGS_DIR = "/configs"    # Soft link to /repos/linux/arch
 $DOTFILES_DIR = "/dotfiles"  # Soft link to /repos/linux/arch/dotfiles
 
-
-
 $XONSHRC_SRC = "/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
 $BASHRC_SRC = "/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
 $TCSHRC_SRC = "/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
@@ -33,5 +31,5 @@ $XONSH_ALIASES_SRC = "/configs/xsh/aliases.xsh"
 $XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh"
 
 # SOURCE FILES #
-source "~/scripts.xsh"
-source "~/aliases.xsh"
+source "~/scripts.xsh" # Functions to call from command line # 
+source "~/aliases.xsh" # Similar to .bash_aliases #
