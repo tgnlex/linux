@@ -14,16 +14,20 @@ $PATH.append('/root/.local/bin')
 $PAGER = "less"
 $EDITOR = "nvim"
 
-$GITHUB = "git@github.com:tgnlex"
 
-$DOTFILES_DIR = "/dotfiles"
-$CONFIGS_DIR = "/configs"
-$REPOS_DIR = "/repos"
+$GITHUB = "git@github.com:tgnlex" 
 
-$XONSHRC_SRC = "/dotfiles/.xonshrc"
-$BASHRC_SRC = "/dotfiles/.bashrc"
-$TCSHRC_SRC = "/dotfiles/.tcshrc"
-$ZSHRC_SRC = "/dotfiles/.zshrc"
+$REPOS_DIR = "/repos"        # Actual repos directory
+$CONFIGS_DIR = "/configs"    # Soft link to /repos/linux/arch
+$DOTFILES_DIR = "/dotfiles"  # Soft link to /repos/linux/arch/dotfiles
+
+
+
+$XONSHRC_SRC = "/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
+$BASHRC_SRC = "/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
+$TCSHRC_SRC = "/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
+$ZSHRC_SRC = "/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
+$KSHRC_SRC = "/fotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
 
 $XONSH_ALIASES_SRC = "/configs/xsh/aliases.xsh"
 $XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh"
