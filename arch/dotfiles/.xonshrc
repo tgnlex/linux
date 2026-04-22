@@ -12,7 +12,6 @@ $GITHUB = "git@github.com:tgnlex"
 $REPOS_DIR = "/repos"
 $DOTFILES_DIR = "/dotfiles"
 $NVIM_CONFIG = "~/.config/nvim/"
-$NVIM_SRC = "/repos/nvim"
 $XONSHRC_SRC = "/dotfiles/.xonshrc"
 $BASHRC_SRC = "/dotfiles/.bashrc"
 
@@ -25,6 +24,5 @@ aliases['unlock'] = 'chmod 777 -R'
 aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
 aliases['git-update'] = 'git-save && git push'
 
-aliases['update-nvim'] = "cp -r $NVIM_SRC /root/.config/nvim/lua && $NVIM_SRC /home/alex/.config/nvim/lua"
-aliases['update-xonsh'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/"
-aliases['update-bash'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['xonsh-update'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/"
+aliases['bash-update'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
