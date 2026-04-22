@@ -24,7 +24,12 @@ aliases['unlock'] = 'chmod 777 -R'
 aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
 aliases['git-update'] = 'git-save && git push'
 
-aliases['xonsh-update'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/"
+aliases['edit-xonsh'] = "$EDITOR $XONSHRC_SRC"
+aliases['edit-bash'] = "$EDITOR $BASHRC_SRC"
+aliases['edit-tcsh'] = "$EDITOR $TCSHRC_SRC"
+aliases['edit-zsh'] = "$EDITOR $ZSHRC_SRC"
+
+aliases['xonsh-update'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/ && source ~/.xonshrc"
 aliases['bash-update'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 aliases['tcsh-update'] = "cp -r $TCSHRC_SRC /root/ && cp -r $TCSHRC_SRC /home/alex/"
 aliases['zsh-update'] = "cp -r $ZSHRC_SRC /root/ && cp -r $ZSHRC_SRC /home/alex/"
