@@ -1,6 +1,7 @@
 # LIBRARIES #
 xontrib load coreutils
-
+# STARTUP MESSAGE #
+print("Welcome to xonsh shell!")
 
 # PATH #
 $PATH.append('/bin')
@@ -35,3 +36,4 @@ aliases['update-xonsh'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home
 aliases['update-bash'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 aliases['update-tcsh'] = "cp -r $TCSHRC_SRC /root/ && cp -r $TCSHRC_SRC /home/alex/"
 aliases['update-zsh'] = "cp -r $ZSHRC_SRC /root/ && cp -r $ZSHRC_SRC /home/alex/"
+
