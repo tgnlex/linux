@@ -1,5 +1,14 @@
-# XONSH WEBCONFIG START
-$XONSH_COLOR_STYLE = 'dracula'
-$PROMPT = '{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd}{RESET} @ '
+# LIBRARIES #
 xontrib load coreutils
-# XONSH WEBCONFIG END
+
+
+# PATH #
+$PATH.append('/root/.local/bin')
+
+
+# ALIASES #
+aliases['la'] = 'ls -a'
+aliases['rf'] = 'rm -rf'
+aliases['venv'] = 'bash /.venv/bin/activate'
+aliases['unlock'] = 'chmod 777 -R'
+aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
