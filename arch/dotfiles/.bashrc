@@ -1,17 +1,30 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [[ -e ~/.bash_aliases ]]; then
-  source ~/.bash_aliases
-fi
-
 #PATH# 
 export PATH='/usr/bin:/usr/bin/local:/bin'
+# ENV VARIABLES #
+export PAGER="less"
+export EDITOR="nvim"
 export JAVA='/usr/bin/java'
 export GITHUB='git@github.com:tgnlex'
 export DOTFILES_DIR='/dotfiles'
 export CONFIGS_DIR='/configs'
 export QT_SELECT=4
+
+export XONSHRC_SRC="/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
+export BASHRC_SRC="/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
+export TCSHRC_SRC="/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
+export ZSHRC_SRC="/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
+export KSHRC_SRC="/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
+export VIMRC_SRC="/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
+export BASH_ALIASES_SRC="/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
+export XONSH_SCRIPTS_SRC="/configs/xsh/scripts.xsh" #
+
+
+if [[ -e ~/.bash_aliases ]]; then
+  source ~/.bash_aliases
+fi
 
 # SHELL OPTIONS #
 
@@ -110,5 +123,7 @@ unset use_color safe_term match_lhs sh
 
 xhost +local:root > /dev/null 2>&1
 
-
+columns() {
+  tput cols
+}
 
