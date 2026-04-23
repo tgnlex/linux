@@ -118,12 +118,4 @@ else
 	fi
 fi
 
-unset use_color safe_term match_lhs sh
-
-
 xhost +local:root > /dev/null 2>&1
-
-columns() {
-  tput cols
-}
-

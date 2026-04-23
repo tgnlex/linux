@@ -19,6 +19,8 @@ alias edit='nvim'
 alias pip='pipx'
 alias gentags='ctags -R .'
 alias ssh-gh-test='ssh -T git@github.com'
+alias github="echo $GITHUB"
+alias columns="tput columns"
 alias git-save='git add * && git commit -a -m "auto-commit"'
 alias git-update='git-save && git push'
 alias runescape="flatpak run com.adamcake.Bolt"
@@ -44,6 +46,7 @@ alias update-bash="cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 alias update-tcsh="cp -r $TCSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 alias update-zsh="cp -r $ZSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 alias update-ksh="cp -r $KSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-alias update-all="update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh-scripts && update-xonsh"
-
+alias update-shells="update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh-scripts && update-xonsh"
+alias update-vim="cp -r $VIMRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex"
+alias update-all="update-vim && update-shells"
 
