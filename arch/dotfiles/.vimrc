@@ -8,9 +8,6 @@ filetype indent on
 syntax on
 
 set number
-set cursorline 
-set cursorcolumn
-
 set expandtab
 set shiftwidth=4
 set tabstop=4
@@ -32,10 +29,9 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.img,*.xlsx
 " -------------------------------"
 " ---------- PLUGINS ----------- "
 call plug#begin('~/.vim/plugged')
-  Plug 'dense-analysis-ale'
+  Plug 'dense-analysis/ale'
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-obsession'
-  Plug 'neoclide/coc.nvim'
 call plug#end()
 " ------------------------------ "
 
