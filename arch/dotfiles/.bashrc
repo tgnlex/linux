@@ -5,8 +5,7 @@
 export PATH='/usr/bin:/usr/bin/local:/bin'
 export JAVA='/usr/bin/java'
 # ENV VARIABLES #
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export PAGER="most"
+export PAGER="less"
 export EDITOR="nvim"
 export QT_SELECT=4
 export GITHUB='git@github.com:tgnlex'
