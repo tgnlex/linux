@@ -11,16 +11,16 @@ $PATH.append('/usr/bin')
 $PATH.append('/root/.local/bin')
 
 # ENV VARIABLES #
-$JAVA = '/usr/bin/java'
+$MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 $PAGER = "less"
 $EDITOR = "nvim"
 
 $GITHUB = "git@github.com:tgnlex" 
-
+# DIRECTORIES # 
 $REPOS_DIR = "/repos"        # Actual repos directory
 $CONFIGS_DIR = "/configs"    # Soft link to /repos/linux/arch
 $DOTFILES_DIR = "/dotfiles"  # Soft link to /repos/linux/arch/dotfiles
-
+# CONFIG SOURCE FILE PATHS # 
 $XONSHRC_SRC = "/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
 $BASHRC_SRC = "/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
 $TCSHRC_SRC = "/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
