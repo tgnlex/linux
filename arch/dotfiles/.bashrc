@@ -9,12 +9,16 @@ export PAGER="less"
 export EDITOR="nvim"
 export QT_SELECT=4
 export GITHUB='git@github.com:tgnlex'
-
+# ==================== #
 # SOFT LINK FILE PATHS #
-export DOTFILES_DIR='/dotfiles'
-export CONFIGS_DIR='/configs'
-
-# SOURCE FILE PATHS #
+# ==================== #
+export DOTFILES_DIR='/dotfiles' # DOTFILES 
+export CONFIGS_DIR='/configs'   # LINUX CONFIG 
+export SCRIPTS_DIR='/sh'        # SHELL SCRIPTS 
+export PYTHON_DIR='/py'         # PYTHON SCRIPTS
+# ======================== #
+# CONFIG SOURCE FILE PATHS #
+# ======================== #
 export XONSHRC_SRC="/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
 export BASHRC_SRC="/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
 export TCSHRC_SRC="/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
@@ -25,18 +29,36 @@ export BASH_ALIASES_SRC="/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE
 export XONSH_SCRIPTS_SRC="/configs/xsh/scripts.xsh" #
 
 
-# IMPORT BASH ALIASES # 
-if [[ -e ~/.bash_aliases ]]; then
-  source ~/.bash_aliases
-fi
-
+# ============= #
 # SHELL OPTIONS #
+# ============= #
 
 shopt -s checkwinsize
 shopt -s expand_aliases
 shopt -s histappend
 
-# COLOR FUNCTION #
+# ============ #
+# MY FUNCTIONS #
+# ============ #
+
+spinner() {
+  for c in '/' '|' '\' '-'; do 
+    printf '\r%s' "$c"
+    sleep 1
+  done 
+}
+
+# =================== #
+# IMPORT BASH ALIASES # 
+# =================== #
+
+if [[ -e ~/.bash_aliases ]]; then
+  source ~/.bash_aliases
+fi
+
+# ===============#
+# DEFAULT CONFIG #
+# ============== #
 colors() {
 	local fgc bgc vals seq0
 
@@ -125,5 +147,7 @@ else
     echo "$i"
   done
 fi
+
+
 
 xhost +local:root > /dev/null 2>&1

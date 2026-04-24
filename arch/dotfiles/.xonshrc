@@ -1,25 +1,52 @@
+# ========= #
 # LIBRARIES #
+# ========= #
+
 xontrib load coreutils
-# SCRIPTS FILE #
+
+# ================== #
+# XONSH SCRIPTS FILE #
+# ================== #
+
 source ~/scripts.xsh
-# STARTUP #
+
+# ======= #
+# GREETER #
+# ======= #
+
 print("Welcome to xonsh shell!")
 
-# PATH #
+# ============== #
+# PATH VARIABLES #
+# ============== #
+
 $PATH.append('/bin')
 $PATH.append('/usr/bin')
 $PATH.append('/root/.local/bin')
 
-# ENV VARIABLES #
-$MANPAGER = "bat -l man -p"
-$EDITOR = "nvim"
+# ================= #
+# STD ENV VARIABLES #
+# ================= #
 
+$PAGER = "less"
+$EDITOR = "nvim"
+$JAVA = '/usr/bin/java'
 $GITHUB = "git@github.com:tgnlex" 
-# DIRECTORIES # 
-$REPOS_DIR = "/repos"        # Actual repos directory
-$CONFIGS_DIR = "/configs"    # Soft link to /repos/linux/arch
-$DOTFILES_DIR = "/dotfiles"  # Soft link to /repos/linux/arch/dotfiles
-# CONFIG SOURCE FILE PATHS # 
+
+# =========== #
+# DIRECTORIES #
+# ============ #
+
+$REPOS_DIR = "/repos"       # GITHUB REPOS    # Actual repos directory
+$CONFIGS_DIR = "/configs"   # LINUX CONFIGS   # Soft link to /repos/linux/arch
+$DOTFILES_DIR = "/dotfiles" # DOTFILES DIR    # Soft link to /repos/linux/arch/dotfiles
+$SCRIPTS_DIR = "/sh"        # SHELL SCRIPTS   # Soft link to /repos/shell 
+$PYTHON_DIR = "/py"         # PYTHON SCRIPTS  # Soflinux/
+
+# ======================== #
+# CONFIG FILE SOURCE PATHS #
+# ======================== #
+
 $XONSHRC_SRC = "/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
 $BASHRC_SRC = "/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
 $TCSHRC_SRC = "/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
@@ -29,28 +56,37 @@ $VIMRC_SRC = "/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
 $BASH_ALIASES_SRC = "/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
 $XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh" #
 
-# ALIASES #
+# ================= #
+# COLORED MAN PAGES #
+# ================= #
+
+$LESS_TERMCAP_mb = "\033[01;31m"     # begin blinking
+$LESS_TERMCAP_md = "\033[01;31m"     # begin bold
+$LESS_TERMCAP_me = "\033[0m"         # end mode
+$LESS_TERMCAP_so = "\033[01;44;36m"  # begin standout-mode
+$LESS_TERMCAP_se = "\033[0m"         # end standout-mode
+$LESS_TERMCAP_us = "\033[00;36m"     # begin underline
+$LESS_TERMCAP_ue = "\033[0m"      
+
+# ============= #
+# SHELL ALIASES #
+# ============= #
+
 aliases['la'] = 'ls -a'
 aliases['rf'] = 'rm -rf'
 aliases['pip'] = 'xpip'
-
 aliases['venv'] = 'bash /.venv/bin/activate'
 aliases['unlock'] = 'chmod 777 -R'
-
 aliases['install'] = 'pacman -Sy'
-
 aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
 aliases['git-update'] = 'git-save && git push'
 
-
 aliases['edit-xonshrc'] = "$EDITOR $XONSHRC_SRC"
-
 aliases['edit-bashrc'] = "$EDITOR $BASHRC_SRC"
 aliases['edit-tcshrc'] = "$EDITOR $TCSHRC_SRC"
 aliases['edit-zshrc'] = "$EDITOR $ZSHRC_SRC"
 aliases['edit-kshrc'] = "$EDITOR $KSHRC_SRC"
 aliases['edit-vimrc'] = "$EDITOR $VIMRC_SRC"
-
 aliases['edit-xonsh-scripts'] = "$EDITOR $XONSH_SCRIPT_SRC"
 aliases['edit-bash-aliases'] = "$EDITOR $BASH_ALIASES_SRC"
 
