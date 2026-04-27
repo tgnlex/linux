@@ -13,3 +13,8 @@ alias unlock="chmod -R 777"
 alias git-save="git add . && git commit -a -m 'auto-commit'"
 alias git-update='git-save && git push'
 
+
+get-date() {
+  date > ./date.txt
+}
+
