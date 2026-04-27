@@ -24,7 +24,7 @@ alias columns="tput columns"
 alias git-save='git add * && git commit -a -m "auto-commit"'
 alias git-update='git-save && git push'
 alias runescape="flatpak run com.adamcake.Bolt"
-
+alias install="pacman -Sy"
 
 alias edit-xonshrc="$EDITOR $XONSHRC_SRC"
 
