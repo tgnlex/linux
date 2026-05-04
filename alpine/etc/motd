@@ -1,0 +1,16 @@
+######################
+# MESSAGE OF THE DAY #
+######################
+
+Welcome to Alex's Alpine Server!
+
+TODO: 
+  > Read the alpine wiki
+  > Install a window system and desktop
+  > Setup FTP 
+END TODO 
+
+#########################################
+### DOCS: https://wiki.alpinelinux.org/ #
+### MOTD: /etc/motd                     #
+#########################################
