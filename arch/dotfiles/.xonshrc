@@ -27,7 +27,11 @@ $PATH.append('/root/.local/bin')
 # ================= #
 # STD ENV VARIABLES #
 # ================= #
-
+$XONSH_COLOR_STYLE = 'material'
+$PROMPT = '{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd}{RESET} @ '
+$LS_COLORS='rs=0:di=01;36:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:'
+$PAGER = "less"
+$EDITOR = "nvim"
 $PAGER = "less"
 $EDITOR = "nvim"
 $JAVA = '/usr/bin/java'
@@ -74,12 +78,13 @@ $LESS_TERMCAP_ue = "\033[0m"
 
 aliases['la'] = 'ls -a'
 aliases['rf'] = 'rm -rf'
-aliases['pip'] = 'xpip'
+aliases['pip'] = 'pipx'
 aliases['venv'] = 'bash /.venv/bin/activate'
 aliases['unlock'] = 'chmod 777 -R'
 aliases['install'] = 'pacman -Sy'
 aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
 aliases['git-update'] = 'git-save && git push'
+aliases['sst'] = 'ss -tulpn'
 
 aliases['edit-xonshrc'] = "$EDITOR $XONSHRC_SRC"
 aliases['edit-bashrc'] = "$EDITOR $BASHRC_SRC"

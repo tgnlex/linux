@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # PATH VARIABLES # 
-export PATH='/usr/bin:/usr/bin/local:/bin'
+export PATH='/usr/bin:/usr/bin/local:/bin:/root/.local/bin'
 export JAVA='/usr/bin/java'
 # ENV VARIABLES #
 export PAGER="less"
