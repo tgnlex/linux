@@ -25,7 +25,10 @@ alias git-save='git add * && git commit -a -m "auto-commit"'
 alias git-update='git-save && git push'
 alias runescape="flatpak run com.adamcake.Bolt"
 alias install="pacman -Sy"
+alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
+alias nc-listen="nc -lvp"
+
 alias edit-xonshrc="$EDITOR $XONSHRC_SRC"
 
 alias edit-bashrc="$EDITOR $BASHRC_SRC"

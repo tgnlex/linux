@@ -85,6 +85,8 @@ aliases['install'] = 'pacman -Sy'
 aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
 aliases['git-update'] = 'git-save && git push'
 aliases['sst'] = 'ss -tulpn'
+aliases['dev'] = 'npm run dev'
+aliases['nc-listen'] = 'nc -lvp'
 
 aliases['edit-xonshrc'] = "$EDITOR $XONSHRC_SRC"
 aliases['edit-bashrc'] = "$EDITOR $BASHRC_SRC"
