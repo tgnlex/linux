@@ -28,7 +28,7 @@ alias install="pacman -Sy"
 alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
 alias nc-listen="nc -lvp"
-
+alias build="gcc ./src/main.c -o ./program"
 alias edit-xonshrc="$EDITOR $XONSHRC_SRC"
 
 alias edit-bashrc="$EDITOR $BASHRC_SRC"

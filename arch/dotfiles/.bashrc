@@ -37,9 +37,13 @@ shopt -s checkwinsize
 shopt -s expand_aliases
 shopt -s histappend
 
-# ============ #
-# MY FUNCTIONS #
-# ============ #
+# =============== #
+# SHELL FUNCTIONS #
+# =============== #
+fatal() {
+  echo '[FATAL]' "$@" >&2
+  exit 1
+}
 
 spinner() {
   local c 
