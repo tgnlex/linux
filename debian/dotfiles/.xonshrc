@@ -1,0 +1,128 @@
+# ========= #
+# LIBRARIES #
+# ========= #
+
+xontrib load coreutils
+
+# ================== #
+# XONSH SCRIPTS FILE #
+# ================== #
+
+source ~/scripts.xsh
+
+# ======= #
+# GREETER #
+# ======= #
+
+print("Welcome to xonsh shell!")
+
+# ============== #
+# PATH VARIABLES #
+# ============== #
+
+$PATH.append('/bin')
+$PATH.append('/usr/bin')
+$PATH.append('/root/.local/bin')
+
+# ================= #
+# STD ENV VARIABLES #
+# ================= #
+$XONSH_COLOR_STYLE = 'material'
+$PROMPT = '{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd}{RESET} @ '
+$LS_COLORS='rs=0:di=01;36:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:'
+$PAGER = "less"
+$EDITOR = "nvim"
+$PAGER = "less"
+$EDITOR = "nvim"
+$JAVA = '/usr/bin/java'
+$GITHUB = "git@github.com:tgnlex" 
+
+# =========== #
+# DIRECTORIES #
+# ============ #
+
+$REPOS_DIR = "/repos"       # GITHUB REPOS    # Actual repos directory
+$CONFIGS_DIR = "/configs"   # LINUX CONFIGS   # Soft link to /repos/linux/arch
+$DOTFILES_DIR = "/dotfiles" # DOTFILES DIR    # Soft link to /repos/linux/arch/dotfiles
+$SCRIPTS_DIR = "/sh"        # SHELL SCRIPTS   # Soft link to /repos/shell 
+$PYTHON_DIR = "/py"         # PYTHON SCRIPTS  # Soflinux/
+
+# ======================== #
+# CONFIG FILE SOURCE PATHS #
+# ======================== #
+
+$XONSHRC_SRC = "/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
+$BASHRC_SRC = "/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
+$TCSHRC_SRC = "/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
+$ZSHRC_SRC = "/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
+$KSHRC_SRC = "/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
+$VIMRC_SRC = "/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
+$BASH_ALIASES_SRC = "/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
+$XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh" #
+
+# ================= #
+# COLORED MAN PAGES #
+# ================= #
+
+$LESS_TERMCAP_mb = "\033[01;31m"     # begin blinking
+$LESS_TERMCAP_md = "\033[01;31m"     # begin bold
+$LESS_TERMCAP_me = "\033[0m"         # end mode
+$LESS_TERMCAP_so = "\033[01;44;36m"  # begin standout-mode
+$LESS_TERMCAP_se = "\033[0m"         # end standout-mode
+$LESS_TERMCAP_us = "\033[00;36m"     # begin underline
+$LESS_TERMCAP_ue = "\033[0m"      
+
+# =============== #
+# SHELL FUNCTIONS #
+# =============== #
+def greet(args):
+    """Standard greeter function"""
+    print("Welcome", args)
+
+def get_wifi():
+    """ Return active wireless interface"""
+    for line in !(nmcli device):
+        dev, typ, state, conn_name = line.split(None, 3)
+        if typ == 'wifi' and state == 'connected':
+        
+
+
+
+# ============= #
+# SHELL ALIASES #
+# ============= #
+
+aliases['la'] = 'ls -a'
+aliases['rf'] = 'rm -rf'
+aliases['pip'] = 'pipx'
+aliases['venv'] = 'bash /.venv/bin/activate'
+aliases['unlock'] = 'chmod 777 -R'
+aliases['install'] = 'pacman -Sy'
+aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
+aliases['git-update'] = 'git-save && git push'
+aliases['sst'] = 'ss -tulpn'
+aliases['dev'] = 'npm run dev'
+aliases['nc-listen'] = 'nc -lvp'
+
+aliases['edit-xonshrc'] = "$EDITOR $XONSHRC_SRC"
+aliases['edit-bashrc'] = "$EDITOR $BASHRC_SRC"
+aliases['edit-tcshrc'] = "$EDITOR $TCSHRC_SRC"
+aliases['edit-zshrc'] = "$EDITOR $ZSHRC_SRC"
+aliases['edit-kshrc'] = "$EDITOR $KSHRC_SRC"
+aliases['edit-vimrc'] = "$EDITOR $VIMRC_SRC"
+aliases['edit-bash-aliases'] = "$EDITOR $BASH_ALIASES_SRC"
+
+aliases['refresh-self'] = "source ~/.xonshrc"
+
+aliases['update-bash-aliases'] = "cp -r $BASH_ALIASES_SRC /root && cp -r $BASH_ALIASES_SRC /home/alex/"
+aliases['update-xonsh'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/ && refresh-self"
+aliases['update-bash'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-tcsh'] = "cp -r $TCSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-zsh'] = "cp -r $ZSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-ksh'] = "cp -r $KSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+aliases['update-vim'] = "cp -r $VIMRC_SRC /root/ && cp -r $VIMRC_SRC /home/alex"
+aliases['update-shells'] = "update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh-scripts && update-xonsh"
+aliases['update-all'] = "update-vim && update-shells"
+
+
+
