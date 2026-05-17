@@ -1,5 +1,0 @@
-# XONSH WEBCONFIG START
-$XONSH_COLOR_STYLE = 'dracula'
-$PROMPT = '{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd}{RESET} @ '
-xontrib load coreutils
-# XONSH WEBCONFIG END

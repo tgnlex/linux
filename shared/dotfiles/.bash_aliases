@@ -1,6 +1,6 @@
-alias la="ls -a"
-alias rf="rm -rf"
-
+alias ls="ls -a"
+alias rm="rm -rf"
+alias cp="cp -r"
 alias stdin="/dev/stdin"
 alias stdout="/dev/stdout"
 alias zero="/dev/zero"
@@ -16,19 +16,21 @@ alias venv='source /.venv/bin/activate'
 alias home='cd ~'
 alias root='cd /'
 alias edit='nvim'
-alias pip='pipx'
 alias gentags='ctags -R .'
 alias ssh-gh-test='ssh -T git@github.com'
 alias github="echo $GITHUB"
 alias columns="tput columns"
 alias git-save='git add * && git commit -a -m "auto-commit"'
 alias git-update='git-save && git push'
-alias runescape="flatpak run com.adamcake.Bolt"
+alias runescape="flatpak run com.adamcake.Bolt --no-sandbox"
 alias install="pacman -Sy"
 alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
 alias nc-listen="nc -lvp"
 alias build="gcc ./src/main.c -o ./program"
+
+alias gen-docs=". /scripts/doc.sh"
+
 alias edit-xonshrc="$EDITOR $XONSHRC_SRC"
 
 alias edit-bashrc="$EDITOR $BASHRC_SRC"
