@@ -40,7 +40,6 @@ alias edit-zshrc="$EDITOR $ZSHRC_SRC"
 alias edit-kshrc="$EDITOR $KSHRC_SRC"
 alias edit-vimrc="$EDITOR $VIMRC_SRC"
 
-alias edit-xonsh-scripts="$EDITOR $XONSH_SCRIPT_SRC"
 alias edit-bash-aliases="$EDITOR $BASH_ALIASES_SRC"
 
 alias refresh-bash="source ~/.bashrc"

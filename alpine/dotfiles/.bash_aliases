@@ -23,7 +23,6 @@ alias columns="tput columns"
 alias git-save='git add * && git commit -a -m "auto-commit"'
 alias git-update='git-save && git push'
 alias runescape="flatpak run com.adamcake.Bolt --no-sandbox"
-alias install="xbps-install -Sy"
 alias uninstall="xbps-remove"
 alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
@@ -39,8 +38,6 @@ alias edit-tcshrc="$EDITOR $TCSHRC_SRC"
 alias edit-zshrc="$EDITOR $ZSHRC_SRC"
 alias edit-kshrc="$EDITOR $KSHRC_SRC"
 alias edit-vimrc="$EDITOR $VIMRC_SRC"
-
-alias edit-xonsh-scripts="$EDITOR $XONSH_SCRIPT_SRC"
 alias edit-bash-aliases="$EDITOR $BASH_ALIASES_SRC"
 
 alias refresh-bash="source ~/.bashrc"

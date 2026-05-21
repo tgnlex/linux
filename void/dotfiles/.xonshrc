@@ -81,7 +81,7 @@ aliases['rf'] = 'rm -rf'
 aliases['pip'] = 'pipx'
 aliases['venv'] = 'bash /.venv/bin/activate'
 aliases['unlock'] = 'chmod 777 -R'
-aliases['install'] = 'pacman -Sy'
+aliases['install'] = 'xbps-isntall -S'
 aliases['git-save'] = 'git add . && git commit -a -m "auto-commit"'
 aliases['git-update'] = 'git-save && git push'
 aliases['sst'] = 'ss -tulpn'
@@ -105,7 +105,7 @@ aliases['update-tcsh'] = "cp -r $TCSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/al
 aliases['update-zsh'] = "cp -r $ZSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 aliases['update-ksh'] = "cp -r $KSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 aliases['update-vim'] = "cp -r $VIMRC_SRC /root/ && cp -r $VIMRC_SRC /home/alex"
-aliases['update-shells'] = "update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh-scripts && update-xonsh"
+aliases['update-shells'] = "update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh"
 aliases['update-all'] = "update-vim && update-shells"
 
 

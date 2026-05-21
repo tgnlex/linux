@@ -29,7 +29,7 @@ alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
 alias nc-listen="nc -lvp"
 alias build="gcc ./src/main.c -o ./program"
-
+alias vim="vim"
 alias gen-docs=". /scripts/doc.sh"
 
 alias edit-xonshrc="$EDITOR $XONSHRC_SRC"
@@ -39,8 +39,6 @@ alias edit-tcshrc="$EDITOR $TCSHRC_SRC"
 alias edit-zshrc="$EDITOR $ZSHRC_SRC"
 alias edit-kshrc="$EDITOR $KSHRC_SRC"
 alias edit-vimrc="$EDITOR $VIMRC_SRC"
-
-alias edit-xonsh-scripts="$EDITOR $XONSH_SCRIPT_SRC"
 alias edit-bash-aliases="$EDITOR $BASH_ALIASES_SRC"
 
 alias refresh-bash="source ~/.bashrc"
