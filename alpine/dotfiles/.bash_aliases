@@ -1,4 +1,4 @@
-alias ls="ls -a"
+alias la="ls -a"
 alias rm="rm -rf"
 alias cp="cp -r"
 alias stdin="/dev/stdin"
@@ -23,7 +23,7 @@ alias columns="tput columns"
 alias git-save='git add * && git commit -a -m "auto-commit"'
 alias git-update='git-save && git push'
 alias runescape="flatpak run com.adamcake.Bolt --no-sandbox"
-alias install="pacman -Sy"
+alias uninstall="xbps-remove"
 alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
 alias nc-listen="nc -lvp"
@@ -38,20 +38,17 @@ alias edit-tcshrc="$EDITOR $TCSHRC_SRC"
 alias edit-zshrc="$EDITOR $ZSHRC_SRC"
 alias edit-kshrc="$EDITOR $KSHRC_SRC"
 alias edit-vimrc="$EDITOR $VIMRC_SRC"
-
-alias edit-xonsh-scripts="$EDITOR $XONSH_SCRIPT_SRC"
 alias edit-bash-aliases="$EDITOR $BASH_ALIASES_SRC"
 
 alias refresh-bash="source ~/.bashrc"
 
-alias update-xonsh-scripts="cp -r $XONSH_SCRIPTS_SRC /root/ && cp -r $XONSH_SCRIPTS_SRC /home/alex/"
 alias update-bash-aliases="cp -r $BASH_ALIASES_SRC /root && cp -r $BASH_ALIASES_SRC /home/alex/"
 alias update-xonsh="cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/"
 alias update-bash="cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 alias update-tcsh="cp -r $TCSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 alias update-zsh="cp -r $ZSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 alias update-ksh="cp -r $KSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-alias update-shells="update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh-scripts && update-xonsh"
+alias update-shells="update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh"
 alias update-vim="cp -r $VIMRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex"
 alias update-all="update-vim && update-shells"
 
