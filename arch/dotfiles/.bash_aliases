@@ -1,5 +1,6 @@
 alias ls="ls -a"
 alias rm="rm -rf"
+alias campfire="aafire -driver curses"
 alias cp="cp -r"
 alias stdin="/dev/stdin"
 alias stdout="/dev/stdout"
