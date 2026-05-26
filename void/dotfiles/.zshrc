@@ -1,5 +1,15 @@
 
+#=====================#
+# SOURCE BASH ALIASES #
+#=====================#
+if [[ -e ~/.bash_aliases ]]; then
+  source ~/.bash_aliases
+fi
 
+
+#===========#
+# VARIABLES # 
+#===========#
 USE_POWERLINE="true"
 HAS_WIDECHARS="false"
 XONSHRC_SRC="/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
@@ -9,19 +19,17 @@ ZSHRC_SRC="/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE
 KSHRC_SRC="/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
 VIMRC_SRC="/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
 BASH_ALIASES_SRC="/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
-XONSH_SCRIPTS_SRC="/configs/xsh/scripts.xsh" #
 
 
+#=========#
+# VC INFO #
+#=========#
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle 'vcs_info:git:*' formats '%b '
+#========#
+# PROMPT #
+#========#
 
-if [[ -e ~/.bash_aliases ]]; then
-  source ~/.bash_aliases
-fi
-
-# Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
-fi
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
+setopt PROMPT_SUBST
+PROMPT='%F{blue}%m%f %F{green}%~$f %#'
