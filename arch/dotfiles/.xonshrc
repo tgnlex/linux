@@ -109,5 +109,7 @@ aliases['update-vim'] = "cp -r $VIMRC_SRC /root/ && cp -r $VIMRC_SRC /home/alex"
 aliases['update-shells'] = "update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh-scripts && update-xonsh"
 aliases['update-all'] = "update-vim && update-shells"
 
+aliases['runescape'] = "flatpak run com.adamcake.Bolt --no-sandbox"
+
 
 
