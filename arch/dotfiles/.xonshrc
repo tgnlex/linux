@@ -36,8 +36,8 @@ $GITHUB = "git@github.com:tgnlex"
 # ============ #
 
 $REPOS_DIR = "/repos"       # GITHUB REPOS    # Actual repos directory
-$CONFIGS_DIR = "/configs"   # LINUX CONFIGS   # Soft link to /repos/linux/arch
-$DOTFILES_DIR = "/dotfiles" # DOTFILES DIR    # Soft link to /repos/linux/arch/dotfiles
+$CONFIGS_DIR = "/config"   # LINUX CONFIGS   # Soft link to /repos/linux/arch
+$DOTFILES_DIR = "/config/dotfiles" # DOTFILES DIR    # Soft link to /repos/linux/arch/dotfiles
 $SCRIPTS_DIR = "/sh"        # SHELL SCRIPTS   # Soft link to /repos/shell 
 $PYTHON_DIR = "/py"         # PYTHON SCRIPTS  # Soflinux/
 
@@ -45,13 +45,13 @@ $PYTHON_DIR = "/py"         # PYTHON SCRIPTS  # Soflinux/
 # CONFIG FILE SOURCE PATHS #
 # ======================== #
 
-$XONSHRC_SRC = "/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
-$BASHRC_SRC = "/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
-$TCSHRC_SRC = "/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
-$ZSHRC_SRC = "/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
-$KSHRC_SRC = "/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
-$VIMRC_SRC = "/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
-$BASH_ALIASES_SRC = "/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
+$XONSHRC_SRC = "/config/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
+$BASHRC_SRC = "/config/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
+$TCSHRC_SRC = "/config/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
+$ZSHRC_SRC = "/config/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
+$KSHRC_SRC = "/config/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
+$VIMRC_SRC = "/config/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
+$BASH_ALIASES_SRC = "/config/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
 $XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh" #
 
 # ================= #
