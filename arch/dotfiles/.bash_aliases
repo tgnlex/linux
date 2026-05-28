@@ -28,8 +28,10 @@ alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
 alias nc-listen="nc -lvp"
 alias build="gcc ./src/main.c -o ./program"
-
-alias gen-docs=". /scripts/doc.sh"
+alias install="pacman -Sy"
+alias uninstall="pacman -R"
+alias sync-all="pacman -Syu"
+alias gen-docs=". /sh/doc.sh"
 
 alias edit-xonshrc="$EDITOR $XONSHRC_SRC"
 
