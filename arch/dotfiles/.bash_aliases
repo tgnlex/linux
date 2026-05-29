@@ -23,7 +23,7 @@ alias github="echo $GITHUB"
 alias columns="tput columns"
 alias git-save='git add * && git commit -a -m "auto-commit"'
 alias git-update='git-save && git push'
-alias runescape="flatpak run com.adamcake.Bolt --no-sandbox"
+alias runescape="flatpak run com.adamcake.Bolt --no-sandbox &"
 alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
 alias nc-listen="nc -lvp"
@@ -32,7 +32,7 @@ alias install="pacman -Sy"
 alias uninstall="pacman -R"
 alias sync-all="pacman -Syu"
 alias gen-docs=". /sh/doc.sh"
-
+alias web="firefox &"
 alias edit-xonshrc="$EDITOR $XONSHRC_SRC"
 
 alias edit-bashrc="$EDITOR $BASHRC_SRC"
