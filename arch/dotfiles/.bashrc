@@ -40,9 +40,11 @@ shopt -s histappend
 # SHELL FUNCTIONS #
 # =============== #
 
+
 ckdir() {
-  mkdir $1 &&
-  cd $1
+  local DIR = "$1"
+  mkdir "$DIR"
+  cd "$DIR"
 }
 
 die() {
