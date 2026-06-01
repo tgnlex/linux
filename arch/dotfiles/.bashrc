@@ -39,17 +39,23 @@ shopt -s histappend
 # =============== #
 # SHELL FUNCTIONS #
 # =============== #
-fatal() {
+
+ckdir() {
+  mkdir $1 &&
+  cd $1
+}
+
+die() {
   echo '[FATAL]' "$@" >&2
   exit 1
 }
 
-spinner() {
+spin() {
   local c 
   while true; do 
     for c in ' / ' ' | ' ' \ ' ' - '; do 
       printf '\r%s' "$c"
-      sleep .2
+ \     sleep .2
     done 
   done 
 }
@@ -143,8 +149,7 @@ if ${use_color} ; then
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
 else
-	if [[ ${EUID} == 0 ]] ; then
-		# show root@ when we don't have colors
+	if [[ ${EUID} == 0 ]] ; then		# show root@ when we don't have colors
 		PS1='\u@\h \W \$ '
 	else
 		PS1='\u@\h \w \$ '
