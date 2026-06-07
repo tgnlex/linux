@@ -56,3 +56,5 @@ alias update-shells="update-ksh && update-zsh && update-tcsh && update-bash && u
 alias update-vim="cp -r $VIMRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex"
 alias update-all="update-vim && update-shells"
 
+
+alias upgrade-system="pacman -Syu"

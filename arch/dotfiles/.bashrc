@@ -9,6 +9,7 @@ export PAGER="less"
 export EDITOR="nvim"
 export QT_SELECT=4
 export GITHUB='git@github.com:tgnlex'
+export WORDS="/usr/share/dict/words"
 # ==================== #
 # SOFT LINK FILE PATHS #
 # ==================== #
