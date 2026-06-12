@@ -4,6 +4,7 @@
 # PATH VARIABLES # 
 export PATH='/usr/bin:/usr/bin/local:/bin:/root/.local/bin'
 export JAVA='/usr/bin/java'
+export WORDS='/usr/share/hunspell/words'
 # ENV VARIABLES #
 export PAGER="less"
 export EDITOR="nvim"
@@ -40,12 +41,13 @@ shopt -s histappend
 # =============== #
 # SHELL FUNCTIONS #
 # =============== #
-fatal() {
-  echo '[FATAL]' "$@" >&2
-  exit 1
+ckdir() {
+  local dir="$1"
+  mkdir "$dir" && 
+  cd "$dir"
 }
 
-spinner() {
+spin() {
   local c 
   while true; do 
     for c in ' / ' ' | ' ' \ ' ' - '; do 
@@ -53,6 +55,11 @@ spinner() {
       sleep .2
     done 
   done 
+}
+
+die() {
+  echo '[FATAL]' "$@" >&2
+  exit 1
 }
 
 # =================== #

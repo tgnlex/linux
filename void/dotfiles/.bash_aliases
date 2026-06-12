@@ -1,3 +1,4 @@
+alias filetype="bash /scripts/filetype.sh"
 alias la="ls -a"
 alias rm="rm -rf"
 alias cp="cp -r"
