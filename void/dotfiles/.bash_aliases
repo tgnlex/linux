@@ -23,7 +23,9 @@ alias github="echo $GITHUB"
 alias columns="tput columns"
 alias git-save='git add * && git commit -a -m "auto-commit"'
 alias git-update='git-save && git push'
+
 alias runescape="flatpak run com.adamcake.Bolt --no-sandbox"
+alias iso="flatpak run org.kde.isoimagewriter"
 alias install="xbps-install -Sy"
 alias uninstall="xbps-remove"
 alias dev="npm run dev"
