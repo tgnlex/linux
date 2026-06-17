@@ -1,12 +1,13 @@
 " REQUIRED = download plug.vim via curl " 
 "---------- SETTINGS ----------"
-set nocompatible
+let mapleader = " "
 
 filetype on
 filetype plugin on
 filetype indent on 
 syntax on
 
+set nocompatible
 set number
 set expandtab
 set shiftwidth=4
@@ -36,7 +37,16 @@ call plug#end()
 " ------------------------------ "
 
 " ---------- KEYMAPS ----------- "
-
+nmap <leader>w :w!<cr>
+map <space> /
+map <C-space> ?
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+map <leader>bd :Bclose<cr>
+map <leader>ba :1,100 bd!<cr>
+map <leader>tn :tabnew<cr>
 " -------------------------------"
 
 " --------- VIMSCRIPT ---------- "

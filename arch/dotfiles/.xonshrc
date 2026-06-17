@@ -21,7 +21,6 @@ $PATH.append('/root/.local/bin')
 # ================= #
 # STD ENV VARIABLES #
 # ================= #
-$XONSH_COLOR_STYLE = 'material'
 $PROMPT = '{BOLD_GREEN}{user}@{hostname}{RESET} @ '
 $LS_COLORS='rs=0:di=01;36:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:'
 $PAGER = "less"
@@ -54,17 +53,6 @@ $VIMRC_SRC = "/config/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
 $BASH_ALIASES_SRC = "/config/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
 $XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh" #
 
-# ================= #
-# COLORED MAN PAGES #
-# ================= #
-
-$LESS_TERMCAP_mb = "\033[01;31m"     # begin blinking
-$LESS_TERMCAP_md = "\033[01;31m"     # begin bold
-$LESS_TERMCAP_me = "\033[0m"         # end mode
-$LESS_TERMCAP_so = "\033[01;44;36m"  # begin standout-mode
-$LESS_TERMCAP_se = "\033[0m"         # end standout-mode
-$LESS_TERMCAP_us = "\033[00;36m"     # begin underline
-$LESS_TERMCAP_ue = "\033[0m"      
 
 # =============== #
 # SHELL FUNCTIONS #
@@ -72,7 +60,15 @@ $LESS_TERMCAP_ue = "\033[0m"
 def greet(args):
     """Standard greeter function"""
     print("Welcome", args)
-
+# ============ #
+# SHELL EVENTS #
+# ============ #
+@events.on_chdir
+def _source_env_xsh(olddir, newdir):
+    env_file = @.imp.pathlib.Path(newdir) / 'env.xsh'
+    if env_file.exists():
+        print(f'Source {env_file}')
+        source @(env_file)
 # ============= #
 # SHELL ALIASES #
 # ============= #

@@ -1,14 +1,30 @@
-# If not running interactively, don't do anything
+# ================= #
+# CHECK INTERACTIVE #
+# ================= #
 [[ $- != *i* ]] && return
 
-# PATH VARIABLES # 
+# =================== #
+# IMPORT BASH ALIASES # 
+# =================== #
+if [[ -e ~/.bash_aliases ]]; then
+  source ~/.bash_aliases
+fi
+
+# ============== #
+# PATH VARIABLES #
+# ============== #
 export PATH='/usr/bin:/usr/bin/local:/bin:/root/.local/bin'
 export JAVA='/usr/bin/java'
+
+# ============= #
 # ENV VARIABLES #
+# ============= #
 export PAGER="less"
 export EDITOR="nvim"
 export QT_SELECT=4
 export GITHUB='git@github.com:tgnlex'
+export WORDS="/usr/share/dict/words"
+
 # ==================== #
 # SOFT LINK FILE PATHS #
 # ==================== #
@@ -16,6 +32,7 @@ export DOTFILES_DIR='/config/dotfiles' # DOTFILES
 export CONFIGS_DIR='/config'   # LINUX CONFIG 
 export SCRIPTS_DIR='/sh'        # SHELL SCRIPTS 
 export PYTHON_DIR='/py'         # PYTHON SCRIPTS
+
 # ======================== #
 # CONFIG SOURCE FILE PATHS #
 # ======================== #
@@ -26,7 +43,6 @@ export ZSHRC_SRC="/config/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE
 export KSHRC_SRC="/config/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
 export VIMRC_SRC="/config/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
 export BASH_ALIASES_SRC="/config/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
-
 
 # ============= #
 # SHELL OPTIONS #
@@ -40,9 +56,11 @@ shopt -s histappend
 # SHELL FUNCTIONS #
 # =============== #
 
+
 ckdir() {
-  mkdir $1 &&
-  cd $1
+  local DIR = "$1"
+  mkdir "$DIR"
+  cd "$DIR"
 }
 
 die() {
@@ -63,10 +81,6 @@ spin() {
 # =================== #
 # IMPORT BASH ALIASES # 
 # =================== #
-
-if [[ -e ~/.bash_aliases ]]; then
-  source ~/.bash_aliases
-fi
 
 # ===============#
 # DEFAULT CONFIG #
@@ -104,7 +118,7 @@ colors() {
 # TERMINAL PROMPT # 
 case ${TERM} in
 	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+	PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
 		;;
 	screen*)
 		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
