@@ -41,19 +41,18 @@ alias edit-zshrc="$EDITOR $ZSHRC_SRC"
 alias edit-kshrc="$EDITOR $KSHRC_SRC"
 alias edit-vimrc="$EDITOR $VIMRC_SRC"
 
-alias edit-xonsh-scripts="$EDITOR $XONSH_SCRIPT_SRC"
 alias edit-bash-aliases="$EDITOR $BASH_ALIASES_SRC"
 
 alias refresh-bash="source ~/.bashrc"
 
-alias update-bash-aliases="cp -r $BASH_ALIASES_SRC /root && cp -r $BASH_ALIASES_SRC /home/alex/"
-alias update-xonsh="cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/"
-alias update-bash="cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-alias update-tcsh="cp -r $TCSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-alias update-zsh="cp -r $ZSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-alias update-ksh="cp -r $KSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
+alias update-bash-aliases="cp -r $BASH_ALIASES_SRC /root/.bash_aliases && cp -r $BASH_ALIASES_SRC /home/alex/.bash_aliases"
+alias update-xonsh="cp -r $XONSHRC_SRC /root/.xonshrc && cp -r $XONSHRC_SRC /home/alex/.xonshrc"
+alias update-bash="cp -r $BASHRC_SRC /root/.bashrc && cp -r $BASHRC_SRC /home/alex/.bashrc"
+alias update-tcsh="cp -r $TCSHRC_SRC /root/.tcshrc && cp -r $BASHRC_SRC /home/alex/.tcshrc"
+alias update-zsh="cp -r $ZSHRC_SRC /root/.zshrc && cp -r $BASHRC_SRC /home/alex/.zshrc"
+alias update-ksh="cp -r $KSHRC_SRC /root/.kshrc && cp -r $BASHRC_SRC /home/alex/.kshrc"
 alias update-shells="update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh"
-alias update-vim="cp -r $VIMRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex"
+alias update-vim="cp -r $VIMRC_SRC /root/.vimrc && cp -r $BASHRC_SRC /home/alex/.vimrc"
 alias update-all="update-vim && update-shells"
 
 
