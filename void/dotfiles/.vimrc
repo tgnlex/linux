@@ -7,12 +7,18 @@ filetype plugin on
 filetype indent on 
 syntax on
 
-set number
-set expandtab
 set shiftwidth=4
 set tabstop=4
-set nobackup
+set cmdheight=1
 set scrolloff=10
+set history=1000
+set wildmode=list:longest
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.img,*.xlsx
+
+set nobackup
+set number 
+set expandtab
+set hid
 set nowrap
 set incsearch
 set ignorecase
@@ -22,10 +28,11 @@ set showmode
 
 set showmatch
 set hlsearch
-set history=1000
+set lazyredraw
+
 set wildmenu
-set wildmode=list:longest
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.img,*.xlsx
+
+
 " -------------------------------"
 " ---------- PLUGINS ----------- "
 call plug#begin('~/.vim/plugged')
@@ -36,7 +43,8 @@ call plug#end()
 " ------------------------------ "
 
 " ---------- KEYMAPS ----------- "
-
+nmap <leader>w :w!<cr>
+nmap <leader>q :q!<cr>
 " -------------------------------"
 
 " --------- VIMSCRIPT ---------- "
