@@ -25,13 +25,12 @@ export QT_SELECT=4
 export GITHUB='git@github.com:tgnlex'
 export WORDS="/usr/share/dict/words"
 
+
 # ==================== #
 # SOFT LINK FILE PATHS #
 # ==================== #
 export DOTFILES_DIR='/config/dotfiles' # DOTFILES 
 export CONFIGS_DIR='/config'   # LINUX CONFIG 
-export SCRIPTS_DIR='/sh'        # SHELL SCRIPTS 
-export PYTHON_DIR='/py'         # PYTHON SCRIPTS
 
 # ======================== #
 # CONFIG SOURCE FILE PATHS #
@@ -169,7 +168,7 @@ else
 		PS1='\u@\h \w \$ '
 	fi
   for ((i = 0; i < 10; i++)); do
-    echo "$i"
+   echo "$i"
   done
 fi
 

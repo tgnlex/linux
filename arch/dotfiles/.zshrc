@@ -1,7 +1,11 @@
-
-
+PAGER="less"
+EDITOR="nvim"
+QT_SELECT=4
+GITHUB='git@github.com:tgnlex'
+WORDS="/usr/share/dict/words"
 USE_POWERLINE="true"
 HAS_WIDECHARS="false"
+
 XONSHRC_SRC="/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
 BASHRC_SRC="/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
 TCSHRC_SRC="/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
