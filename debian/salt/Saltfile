@@ -1,4 +1,0 @@
-salt:
-  log_level: debug 
-salt-call 
-  log_level: debug
