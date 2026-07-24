@@ -20,7 +20,6 @@ set ignorecase
 set smartcase
 set showcmd
 set showmode
-
 set showmatch
 set hlsearch
 set history=1000
@@ -47,15 +46,26 @@ map <C-l> <C-W>l
 map <leader>bd :Bclose<cr>
 map <leader>ba :1,100 bd!<cr>
 map <leader>tn :tabnew<cr>
+map <leader>w :split<cr>
+map <leader>v :vsplit<cr>
+nnoremap o o<esc>
+nnoremap O O<esc>
+nnoremap <F3> :NERDTreeToggle<cr>
 " -------------------------------"
+
 
 " --------- VIMSCRIPT ---------- "
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
 augroup END 
+augroup cursor_off
+  autocmd!
+  autocmd WinLeave * set nocursorline nocursorcolumn
+  autocmd WinEnter * set cursorline cursorcolumn
+augroup END
 " -------------------------------"
 "
 " --------- STATUS LINE -------- "
-
+"
 " ------------------------------ "
