@@ -26,6 +26,7 @@ alias git-update='git-save && git push'
 alias runescape="flatpak run com.adamcake.Bolt --no-sandbox &"
 alias dev="npm run dev"
 alias sst="ss -tulpn" # check ports
+alias pip="pipenv"
 alias nc-listen="nc -lvp"
 alias build="gcc ./src/main.c -o ./program"
 alias install="pacman -Sy"
