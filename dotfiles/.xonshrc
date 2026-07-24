@@ -1,3 +1,4 @@
+
 # ========= #
 # LIBRARIES #
 # ========= #
@@ -5,9 +6,9 @@
 xontrib load coreutils
 
 # ======= #
-# GREETER #
+# STARTUP #
 # ======= #
-
+fastfetch
 print("Welcome to xonsh shell!")
 
 # ============== #

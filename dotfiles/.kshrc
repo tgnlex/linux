@@ -1,5 +1,6 @@
 # STARTUP #
-echo "Welcome to ksh!"
+fastfetch
+echo "Welcome to kshell Alex!"
 
 # SHELL OPTIONS #
 set -o allexport

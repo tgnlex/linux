@@ -1,4 +1,4 @@
-# ================= #
+#w================= #
 # CHECK INTERACTIVE #
 # ================= #
 [[ $- != *i* ]] && return
@@ -9,6 +9,11 @@
 if [[ -e ~/.bash_aliases ]]; then
   source ~/.bash_aliases
 fi
+# ======= #
+# STARTUP #
+# ======= #
+fastfetch
+printf "Welcome to the bash shell Alex!\n"
 
 # ============== #
 # PATH VARIABLES #

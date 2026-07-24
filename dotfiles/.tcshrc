@@ -1,4 +1,5 @@
-
+fastfetch
+echo "Welcome to tcsh Alex!"
 set path = ( /bin /usr/local/bin /usr/bin )
 
 
