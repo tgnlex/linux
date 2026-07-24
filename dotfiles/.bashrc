@@ -13,7 +13,7 @@ fi
 # STARTUP #
 # ======= #
 fastfetch
-printf "Welcome to the bash shell Alex!\n"
+printf "Welcome to the bash shell Alex!"
 
 # ============== #
 # PATH VARIABLES #

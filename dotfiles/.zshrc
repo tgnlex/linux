@@ -1,3 +1,6 @@
+fastfetch
+printf "Welcome to Z-Shell Alex!\n"
+
 PAGER="less"
 EDITOR="nvim"
 QT_SELECT=4
@@ -6,15 +9,13 @@ WORDS="/usr/share/dict/words"
 USE_POWERLINE="true"
 HAS_WIDECHARS="false"
 
-XONSHRC_SRC="/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
-BASHRC_SRC="/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
-TCSHRC_SRC="/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
-ZSHRC_SRC="/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
-KSHRC_SRC="/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
-VIMRC_SRC="/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
-BASH_ALIASES_SRC="/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
-XONSH_SCRIPTS_SRC="/configs/xsh/scripts.xsh" #
-
+XONSHRC_SRC="/config/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
+BASHRC_SRC="/config/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
+TCSHRC_SRC="/config/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
+ZSHRC_SRC="/config/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
+KSHRC_SRC="/config/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
+VIMRC_SRC="/config/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
+BASH_ALIASES_SRC="/config/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
 
 
 if [[ -e ~/.bash_aliases ]]; then
