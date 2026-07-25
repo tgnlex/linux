@@ -67,5 +67,22 @@ augroup END
 " -------------------------------"
 "
 " --------- STATUS LINE -------- "
-"
+
+set statusline=
+
+" Left side info
+set statusline+=%F    " Full path to the file
+set statusline+=%m    " Modified flag [+] if the file has unsaved changes
+set statusline+=%r    " Read-only flag [RO]
+set statusline+=%y    " File type (e.g., [python])
+
+" Right-align alignment separator
+set statusline+=%=
+
+" Right side info
+set statusline+=[%{&fileencoding}] " File encoding (e.g., utf-8)
+set statusline+=\ %l          " Current line number
+set statusline+=/%L           " Total lines in the file
+set statusline+=,%c           " Current column number
+set statusline+=\ %P          " Percentage through the fil
 " ------------------------------ "
