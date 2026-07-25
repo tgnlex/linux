@@ -1,7 +1,8 @@
+"
 "REQUIRED = download plug.vim via curl " 
 "---------- SETTINGS ----------"
 let mapleader = " "
-
+colorscheme molokai
 filetype on
 filetype plugin on
 filetype indent on 
