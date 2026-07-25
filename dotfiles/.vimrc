@@ -43,7 +43,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <leader>w :w!<cr>
-map <leader>q :qa!<cr>
+map <leader>q :q!<cr>
+map <leader>qa :qa!<cr>
 map <leader>bd :Bclose<cr>
 map <leader>ba :1,100 bd!<cr>
 map <leader>tn :tabnew<cr>
@@ -51,6 +52,7 @@ map <leader>h :split<cr>
 map <leader>v :vsplit<cr>
 nnoremap o o<esc>
 nnoremap O O<esc>
+nnoremap <F2> :read !date<cr>
 nnoremap <F3> :NERDTreeToggle<cr>
 " -------------------------------"
 
