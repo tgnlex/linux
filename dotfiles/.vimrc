@@ -1,4 +1,4 @@
-" REQUIRED = download plug.vim via curl " 
+"REQUIRED = download plug.vim via curl " 
 "---------- SETTINGS ----------"
 let mapleader = " "
 
@@ -32,21 +32,22 @@ call plug#begin('~/.vim/plugged')
   Plug 'dense-analysis/ale'
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-obsession'
-call plug#end()
+  Plug 'jreybert/vimagit'
+ call plug#end()
 " ------------------------------ "
 
 " ---------- KEYMAPS ----------- "
-nmap <leader>w :w!<cr>
-map <space> /
 map <C-space> ?
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+map <leader>w :w!<cr>
+map <leader>q :qa!<cr>
 map <leader>bd :Bclose<cr>
 map <leader>ba :1,100 bd!<cr>
 map <leader>tn :tabnew<cr>
-map <leader>w :split<cr>
+map <leader>h :split<cr>
 map <leader>v :vsplit<cr>
 nnoremap o o<esc>
 nnoremap O O<esc>
@@ -59,11 +60,6 @@ augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
 augroup END 
-augroup cursor_off
-  autocmd!
-  autocmd WinLeave * set nocursorline nocursorcolumn
-  autocmd WinEnter * set cursorline cursorcolumn
-augroup END
 " -------------------------------"
 "
 " --------- STATUS LINE -------- "
