@@ -41,7 +41,8 @@ export ZSHRC_SRC="/config/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE
 export KSHRC_SRC="/config/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
 export VIMRC_SRC="/config/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
 export BASH_ALIASES_SRC="/config/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
-
+export INPUTRC_SRC="/config/dotfiles/.inputrc" # INPUT RC FILE 
+export TMUX_SRC="/config/dotfiles/.tmux.conf"  # TMUX CONFIG FILE
 
 # =================== #
 # IMPORT BASH ALIASES # 
