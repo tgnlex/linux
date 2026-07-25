@@ -56,12 +56,26 @@ nnoremap <F2> :read !date<cr>
 nnoremap <F3> :NERDTreeToggle<cr>
 " -------------------------------"
 
+" ----------- VIMSCRIPT ------------"
 
-" --------- VIMSCRIPT ---------- "
+function! s:hl_yank(duration) abort
+    if v:event.operator !=# 'y' | return | endif
+    let l:pos = getregionpos(getpos("'["), getpos("']"), {'type': v:event.regtype})
+    let l:m = matchaddpos('IncSearch', mapnew(l:pos, {_, v -> [v[0][1], v[0][2], v[1][2] - v[0][2] + (v:event.inclusive || v:event.regtype ==# 'V' ? 1 : 0)]}))
+    let l:winid = win_getid()
+    call timer_start(a:duration, {-> matchdelete(l:m, l:winid)})
+endfunction
+" --------- AUTOCOMMANDS ---------- "
+""" Set fold based on filetype """
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
-augroup END 
+augroup END
+""" Highlight on yank """
+augroup HighlightYank
+    autocmd!
+    autocmd TextYankPost * silent! call s:hl_yank(300)
+augroup END
 " -------------------------------"
 "
 " --------- STATUS LINE -------- "
