@@ -34,7 +34,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-obsession'
   Plug 'jreybert/vimagit'
- call plug#end()
+  Plug 'tpope/vim-surround'
+  Plug 'vim-airline/vim-airline'
+  Plug 'sirver/ultisnips'
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+call plug#end()
 " ------------------------------ "
 
 " ---------- KEYMAPS ----------- "
@@ -51,12 +57,11 @@ map <leader>ba :1,100 bd!<cr>
 map <leader>tn :tabnew<cr>
 map <leader>h :split<cr>
 map <leader>v :vsplit<cr>
-nnoremap o o<esc>
+noremap <F12> :PlugInstall<cr>
+noremap <F2> :read !date<cr>
+noremap <F3> :NERDTreeToggle<cr>
 nnoremap O O<esc>
-nnoremap <F2> :read !date<cr>
-nnoremap <F3> :NERDTreeToggle<cr>
-" -------------------------------"
-
+nnoremap o o<esc>
 " ----------- VIMSCRIPT ------------"
 
 function! s:hl_yank(duration) abort
@@ -99,3 +104,5 @@ set statusline+=/%L           " Total lines in the file
 set statusline+=,%c           " Current column number
 set statusline+=\ %P          " Percentage through the fil
 " ------------------------------ "
+" ------------ MISC ------------ "
+let NERDTreeShowHidden=1
