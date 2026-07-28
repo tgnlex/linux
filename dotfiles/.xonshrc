@@ -5,12 +5,6 @@
 
 xontrib load coreutils
 
-# ======= #
-# STARTUP #
-# ======= #
-fastfetch
-print("Welcome to xonsh shell!")
-
 # ============== #
 # PATH VARIABLES #
 # ============== #
@@ -38,8 +32,6 @@ $GITHUB = "git@github.com:tgnlex"
 $REPOS_DIR = "/repos"       # GITHUB REPOS    # Actual repos directory
 $CONFIGS_DIR = "/config"   # LINUX CONFIGS   # Soft link to /repos/linux/arch
 $DOTFILES_DIR = "/config/dotfiles" # DOTFILES DIR    # Soft link to /repos/linux/arch/dotfiles
-$SCRIPTS_DIR = "/sh"        # SHELL SCRIPTS   # Soft link to /repos/shell 
-$PYTHON_DIR = "/py"         # PYTHON SCRIPTS  # Soflinux/
 
 # ======================== #
 # CONFIG FILE SOURCE PATHS #
@@ -52,15 +44,14 @@ $ZSHRC_SRC = "/config/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE
 $KSHRC_SRC = "/config/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
 $VIMRC_SRC = "/config/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
 $BASH_ALIASES_SRC = "/config/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
-$XONSH_SCRIPTS_SRC = "/configs/xsh/scripts.xsh" #
 
 
 # =============== #
 # SHELL FUNCTIONS #
 # =============== #
-def greet(args):
+def greet(name, sys):
     """Standard greeter function"""
-    print("Welcome", args)
+    print("Hello {} [{}]! Welcome to Xonsh".format(name, sys))
 # ============ #
 # SHELL EVENTS #
 # ============ #
@@ -75,6 +66,7 @@ def _source_env_xsh(olddir, newdir):
 # ============= #
 aliases['filetype'] = 'bash /sh/filetype.sh'
 aliases['la'] = 'ls -a'
+aliases['ls'] = 'la'
 aliases['rf'] = 'rm -rf'
 aliases['pip'] = 'pipx'
 aliases['venv'] = 'bash /.venv/bin/activate'
@@ -107,6 +99,12 @@ aliases['update-shells'] = "update-ksh && update-zsh && update-tcsh && update-ba
 aliases['update-all'] = "update-vim && update-shells"
 
 aliases['runescape'] = "flatpak run com.adamcake.Bolt --no-sandbox &"
+
+# ======= #
+# STARTUP #
+# ======= #
+fastfetch
+greet("Alex", "Arch")
 
 
 

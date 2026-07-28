@@ -19,7 +19,7 @@ export JAVA='/usr/bin/java'
 # ENV VARIABLES #
 # ============= #
 export PAGER="less"
-export EDITOR="vim"
+export EDITOR="nvim"
 export QT_SELECT=4
 export GITHUB='git@github.com:tgnlex'
 export WORDS="/usr/share/dict/words"
